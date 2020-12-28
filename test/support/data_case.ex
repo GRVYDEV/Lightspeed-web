@@ -1,4 +1,4 @@
-defmodule Lightspeedweb.DataCase do
+defmodule LightspeedWeb.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule Lightspeedweb.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Lightspeedweb.DataCase, async: true`, although
+  by setting `use LightspeedWeb.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,20 +18,20 @@ defmodule Lightspeedweb.DataCase do
 
   using do
     quote do
-      alias Lightspeedweb.Repo
+      alias LightspeedWeb.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Lightspeedweb.DataCase
+      import LightspeedWeb.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Lightspeedweb.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LightspeedWeb.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Lightspeedweb.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(LightspeedWeb.Repo, {:shared, self()})
     end
 
     :ok

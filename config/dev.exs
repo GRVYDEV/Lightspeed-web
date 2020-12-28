@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :lightspeedweb, Lightspeedweb.Repo,
+config :lightspeedweb, LightspeedWeb.Repo,
   username: "postgres",
   password: "postgres",
   database: "lightspeedweb_dev",
@@ -15,7 +15,7 @@ config :lightspeedweb, Lightspeedweb.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :lightspeedweb, LightspeedwebWeb.Endpoint,
+config :lightspeedweb, LightspeedWebWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,7 +55,7 @@ config :lightspeedweb, LightspeedwebWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :lightspeedweb, LightspeedwebWeb.Endpoint,
+config :lightspeedweb, LightspeedWebWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",

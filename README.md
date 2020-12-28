@@ -1,4 +1,4 @@
-# Lightspeedweb
+# LightspeedWeb
 
 To start your Phoenix server:
 

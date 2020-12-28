@@ -1,4 +1,4 @@
-defmodule LightspeedwebWeb.Endpoint do
+defmodule LightspeedWebWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :lightspeedweb
 
   # The session will be stored in the cookie and signed,
@@ -7,10 +7,10 @@ defmodule LightspeedwebWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_lightspeedweb_key",
-    signing_salt: "V0DoIMI0"
+    signing_salt: "jLfzc4//"
   ]
 
-  socket "/socket", LightspeedwebWeb.UserSocket,
+  socket "/socket", LightspeedWebWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -50,5 +50,5 @@ defmodule LightspeedwebWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug LightspeedwebWeb.Router
+  plug LightspeedWebWeb.Router
 end

@@ -1,4 +1,4 @@
-defmodule LightspeedwebWeb.Telemetry do
+defmodule LightspeedWebWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -49,7 +49,7 @@ defmodule LightspeedwebWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {LightspeedwebWeb, :count_users, []}
+      # {LightspeedWebWeb, :count_users, []}
     ]
   end
 end

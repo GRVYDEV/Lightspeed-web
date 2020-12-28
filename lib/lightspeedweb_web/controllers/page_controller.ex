@@ -1,5 +1,5 @@
-defmodule LightspeedwebWeb.PageController do
-  use LightspeedwebWeb, :controller
+defmodule LightspeedWebWeb.PageController do
+  use LightspeedWebWeb, :controller
 
   def index(conn, _params) do
     render(conn, "index.html")

@@ -1,4 +1,4 @@
-defmodule LightspeedwebWeb.ConnCase do
+defmodule LightspeedWebWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule LightspeedwebWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use LightspeedwebWeb.ConnCase, async: true`, although
+  by setting `use LightspeedWebWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule LightspeedwebWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import LightspeedwebWeb.ConnCase
+      import LightspeedWebWeb.ConnCase
 
-      alias LightspeedwebWeb.Router.Helpers, as: Routes
+      alias LightspeedWebWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint LightspeedwebWeb.Endpoint
+      @endpoint LightspeedWebWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Lightspeedweb.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LightspeedWeb.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Lightspeedweb.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(LightspeedWeb.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

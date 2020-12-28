@@ -1,5 +1,5 @@
-defmodule LightspeedwebWeb.ErrorView do
-  use LightspeedwebWeb, :view
+defmodule LightspeedWebWeb.ErrorView do
+  use LightspeedWebWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

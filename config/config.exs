@@ -8,15 +8,16 @@
 use Mix.Config
 
 config :lightspeedweb,
-  ecto_repos: [Lightspeedweb.Repo]
+  namespace: LightspeedWeb,
+  ecto_repos: [LightspeedWeb.Repo]
 
 # Configures the endpoint
-config :lightspeedweb, LightspeedwebWeb.Endpoint,
+config :lightspeedweb, LightspeedWebWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "NOSXAKGt/0DCA7SL1d3E3o8OWQStP/MbrLN2xFHBJUWlNMifLLIpOJUxRC+5Sgdr",
-  render_errors: [view: LightspeedwebWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Lightspeedweb.PubSub,
-  live_view: [signing_salt: "5rjV4MRs"]
+  secret_key_base: "6ymm8RN5T27eeNHvhJZmTrE/l0/y/OWY9F0PL2T8LSTBARPPsuiPAVx1F5tG4dGo",
+  render_errors: [view: LightspeedWebWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: LightspeedWeb.PubSub,
+  live_view: [signing_salt: "2R4S5ij4"]
 
 # Configures Elixir's Logger
 config :logger, :console,

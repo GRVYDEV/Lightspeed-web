@@ -1,5 +1,5 @@
-defmodule LightspeedwebWeb.Router do
-  use LightspeedwebWeb, :router
+defmodule LightspeedWebWeb.Router do
+  use LightspeedWebWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule LightspeedwebWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", LightspeedwebWeb do
+  scope "/", LightspeedWebWeb do
     pipe_through :browser
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", LightspeedwebWeb do
+  # scope "/api", LightspeedWebWeb do
   #   pipe_through :api
   # end
 
@@ -36,7 +36,7 @@ defmodule LightspeedwebWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: LightspeedwebWeb.Telemetry
+      live_dashboard "/dashboard", metrics: LightspeedWebWeb.Telemetry
     end
   end
 end

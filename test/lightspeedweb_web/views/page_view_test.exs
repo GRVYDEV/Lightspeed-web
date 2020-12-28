@@ -1,3 +1,3 @@
-defmodule LightspeedwebWeb.PageViewTest do
-  use LightspeedwebWeb.ConnCase, async: true
+defmodule LightspeedWebWeb.PageViewTest do
+  use LightspeedWebWeb.ConnCase, async: true
 end

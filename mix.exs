@@ -1,4 +1,4 @@
-defmodule Lightspeedweb.MixProject do
+defmodule LightspeedWeb.MixProject do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule Lightspeedweb.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Lightspeedweb.Application, []},
+      mod: {LightspeedWeb.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

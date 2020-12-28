@@ -1,5 +1,5 @@
-defmodule LightspeedwebWeb.PageControllerTest do
-  use LightspeedwebWeb.ConnCase
+defmodule LightspeedWebWeb.PageControllerTest do
+  use LightspeedWebWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

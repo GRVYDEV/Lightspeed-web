@@ -1,12 +1,12 @@
-defmodule LightspeedwebWeb do
+defmodule LightspeedWebWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use LightspeedwebWeb, :controller
-      use LightspeedwebWeb, :view
+      use LightspeedWebWeb, :controller
+      use LightspeedWebWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule LightspeedwebWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: LightspeedwebWeb
+      use Phoenix.Controller, namespace: LightspeedWebWeb
 
       import Plug.Conn
-      import LightspeedwebWeb.Gettext
-      alias LightspeedwebWeb.Router.Helpers, as: Routes
+      import LightspeedWebWeb.Gettext
+      alias LightspeedWebWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,7 +31,7 @@ defmodule LightspeedwebWeb do
     quote do
       use Phoenix.View,
         root: "lib/lightspeedweb_web/templates",
-        namespace: LightspeedwebWeb
+        namespace: LightspeedWebWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule LightspeedwebWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import LightspeedwebWeb.Gettext
+      import LightspeedWebWeb.Gettext
     end
   end
 
@@ -66,9 +66,9 @@ defmodule LightspeedwebWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import LightspeedwebWeb.ErrorHelpers
-      import LightspeedwebWeb.Gettext
-      alias LightspeedwebWeb.Router.Helpers, as: Routes
+      import LightspeedWebWeb.ErrorHelpers
+      import LightspeedWebWeb.Gettext
+      alias LightspeedWebWeb.Router.Helpers, as: Routes
     end
   end
 

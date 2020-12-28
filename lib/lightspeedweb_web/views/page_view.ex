@@ -1,3 +1,3 @@
-defmodule LightspeedwebWeb.PageView do
-  use LightspeedwebWeb, :view
+defmodule LightspeedWebWeb.PageView do
+  use LightspeedWebWeb, :view
 end

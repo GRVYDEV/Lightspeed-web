@@ -1,4 +1,4 @@
-defmodule Lightspeedweb.Application do
+defmodule LightspeedWeb.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,27 +8,27 @@ defmodule Lightspeedweb.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Lightspeedweb.Repo,
+      LightspeedWeb.Repo,
       # Start the Telemetry supervisor
-      LightspeedwebWeb.Telemetry,
+      LightspeedWebWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Lightspeedweb.PubSub},
+      {Phoenix.PubSub, name: LightspeedWeb.PubSub},
       # Start the Endpoint (http/https)
-      LightspeedwebWeb.Endpoint
-      # Start a worker by calling: Lightspeedweb.Worker.start_link(arg)
-      # {Lightspeedweb.Worker, arg}
+      LightspeedWebWeb.Endpoint
+      # Start a worker by calling: LightspeedWeb.Worker.start_link(arg)
+      # {LightspeedWeb.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Lightspeedweb.Supervisor]
+    opts = [strategy: :one_for_one, name: LightspeedWeb.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    LightspeedwebWeb.Endpoint.config_change(changed, removed)
+    LightspeedWebWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end
