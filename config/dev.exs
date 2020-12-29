@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :lightspeedweb, LightspeedWeb.Repo,
   username: "postgres",
-  password: "",
+  password: "postgres",
   database: "lightspeedweb_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
